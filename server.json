@@ -1,0 +1,244 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Sushi de salmão",
+      "description": "Salmão fresco, arroz temperado, nori e molho shoyu.",
+      "price": 12.50,
+      "category": "sushi",
+      "image": "https://j6t2y8j5.rocketcdn.me/wp-content/uploads/2020/06/como-fazer-sushi-em-casa-origem-tipos-desenvolvidos-e-receitas.png"
+    },
+    {
+      "id": 2,
+      "name": "Sashimi de atum",
+      "description": "Fatias finas de atum fresco, molho ponzu e gengibre ralado.",
+      "price": 15.00,
+      "categoria": "sushi",
+      "image": "https://j6t2y8j5.rocketcdn.me/wp-content/uploads/2020/06/como-fazer-sushi-em-casa-origem-tipos-desenvolvidos-e-receitas.png"
+    },
+    {
+      "id": 3,
+      "name": "Uramaki de camarão",
+      "description": "Camarão empanado, cream cheese, cebolinha e gergelim.",
+      "price": 14.00,
+      "categoria": "sushi",
+      "image": "https://j6t2y8j5.rocketcdn.me/wp-content/uploads/2020/06/como-fazer-sushi-em-casa-origem-tipos-desenvolvidos-e-receitas.png"
+    },
+    {
+      "id": 4,
+      "name": "Uramaki Califórnia",
+      "description": "Kani kama, pepino e abacate enrolados em arroz e gergelim.",
+      "price": 8.50,
+      "categoria": "sushi",
+      "image": "https://j6t2y8j5.rocketcdn.me/wp-content/uploads/2020/06/como-fazer-sushi-em-casa-origem-tipos-desenvolvidos-e-receitas.png"
+    },
+    {
+      "id": 5,
+      "name": "Nigiri de salmão",
+      "description": "Fatia de salmão fresco sobre bolinho de arroz.",
+      "price": 10.00,
+      "categoria": "sushi",
+      "image": "https://j6t2y8j5.rocketcdn.me/wp-content/uploads/2020/06/como-fazer-sushi-em-casa-origem-tipos-desenvolvidos-e-receitas.png"
+    },
+    {
+      "id": 6,
+      "name": "Temaki de atum",
+      "description": "Atum fresco, arroz, nori e cream cheese em formato de cone.",
+      "price": 16.00,
+      "categoria": "sushi",
+      "image": "https://j6t2y8j5.rocketcdn.me/wp-content/uploads/2020/06/como-fazer-sushi-em-casa-origem-tipos-desenvolvidos-e-receitas.png"
+    },
+    {
+      "id": 7,
+      "name": "Jyo de salmão",
+      "description": "Salmão grelhado, arroz temperado, nori e molho teriyaki.",
+      "price": 18.00,
+      "categoria": "sushi",
+      "image": "https://j6t2y8j5.rocketcdn.me/wp-content/uploads/2020/06/como-fazer-sushi-em-casa-origem-tipos-desenvolvidos-e-receitas.png"
+    },
+    {
+      "id": 8,
+      "name": "Ceviche de peixe branco",
+      "description": "Peixe branco marinado em limão, cebola roxa, coentro e pimenta.",
+      "price": 20.00,
+      "categoria": "sushi",
+      "image": "https://j6t2y8j5.rocketcdn.me/wp-content/uploads/2020/06/como-fazer-sushi-em-casa-origem-tipos-desenvolvidos-e-receitas.png"
+    },
+    {
+      "id": 9,
+      "name": "Tartar de salmão",
+      "description": "Salmão cru picado com cebola roxa, cebolinha, gergelim e azeite.",
+      "price": 22.00,
+      "categoria": "sushi",
+      "image": "https://j6t2y8j5.rocketcdn.me/wp-content/uploads/2020/06/como-fazer-sushi-em-casa-origem-tipos-desenvolvidos-e-receitas.png"
+    },
+    {
+      "id": 10,
+      "name": "Hot roll",
+      "description": "Enrolado de arroz, salmão, cream cheese e cebolinha, empanado e frito.",
+      "price": 13.00,
+      "categoria": "sushi",
+      "image": "https://j6t2y8j5.rocketcdn.me/wp-content/uploads/2020/06/como-fazer-sushi-em-casa-origem-tipos-desenvolvidos-e-receitas.png"
+    },
+    {
+      "id": 11,
+      "name": "Yakisoba de frango",
+      "description": "Macarrão, frango, cebola, cenoura, brócolis e molho shoyu.",
+      "price": 22.50,
+      "categoria": "yakisoba",
+      "image": "https://j6t2y8j5.rocketcdn.me/wp-content/uploads/2020/06/como-fazer-sushi-em-casa-origem-tipos-desenvolvidos-e-receitas.png"
+    },
+    {
+      "id": 12,
+      "name": "Yakisoba de carne",
+      "description": "Macarrão, carne, cebola, pimentão, acelga e molho teriyaki.",
+      "price": 25.00,
+      "categoria": "yakisoba",
+      "image": "https://j6t2y8j5.rocketcdn.me/wp-content/uploads/2020/06/como-fazer-sushi-em-casa-origem-tipos-desenvolvidos-e-receitas.png"
+    },
+    {
+      "id": 13,
+      "name": "Yakisoba vegetariano",
+      "description": "Macarrão, couve-flor, cenoura, brócolis, cogumelos e molho shoyu.",
+      "price": 20.00,
+      "categoria": "yakisoba",
+      "image": "https://j6t2y8j5.rocketcdn.me/wp-content/uploads/2020/06/como-fazer-sushi-em-casa-origem-tipos-desenvolvidos-e-receitas.png"
+    },
+    {
+      "id": 14,
+      "name": "Yakisoba de frutos do mar",
+      "description": "Macarrão, camarão, lula, mexilhão, cebola e molho teriyaki.",
+      "price": 30.00,
+      "categoria": "yakisoba",
+      "image": "https://j6t2y8j5.rocketcdn.me/wp-content/uploads/2020/06/como-fazer-sushi-em-casa-origem-tipos-desenvolvidos-e-receitas.png"
+    },
+    {
+      "id": 15,
+      "name": "Yakisoba de legumes",
+      "description": "Macarrão, abobrinha, berinjela, pimentão, cenoura e molho shoyu.",
+      "price": 18.50,
+      "categoria": "yakisoba",
+      "image": "https://j6t2y8j5.rocketcdn.me/wp-content/uploads/2020/06/como-fazer-sushi-em-casa-origem-tipos-desenvolvidos-e-receitas.png"
+    },
+    {
+      "id": 16,
+      "name": "Yakisoba apimentado",
+      "description": "Macarrão, carne, cebola, pimentão, acelga e molho apimentado.",
+      "price": 26.50,
+      "categoria": "yakisoba",
+      "image": "https://j6t2y8j5.rocketcdn.me/wp-content/uploads/2020/06/como-fazer-sushi-em-casa-origem-tipos-desenvolvidos-e-receitas.png"
+    },
+    {
+      "id": 17,
+      "name": "Yakisoba de frango com legumes",
+      "description": "Macarrão, frango, cenoura, brócolis, cebola e molho shoyu.",
+      "price": 23.00,
+      "categoria": "yakisoba",
+      "image": "https://j6t2y8j5.rocketcdn.me/wp-content/uploads/2020/06/como-fazer-sushi-em-casa-origem-tipos-desenvolvidos-e-receitas.png"
+    },
+    {
+      "id": 18,
+      "name": "Yakisoba de cogumelos",
+      "description": "Macarrão, cogumelos shitake e shimeji, acelga, cebolinha e molho teriyaki.",
+      "price": 21.50,
+      "categoria": "yakisoba",
+      "image": "https://j6t2y8j5.rocketcdn.me/wp-content/uploads/2020/06/como-fazer-sushi-em-casa-origem-tipos-desenvolvidos-e-receitas.png"
+    },
+    {
+      "id": 19,
+      "name": "Yakisoba de frango com legumes e amendoim",
+      "description": "Macarrão, frango, cebola, cenoura, brócolis, amendoim e molho de amendoim.",
+      "price": 24.50,
+      "categoria": "yakisoba",
+      "image": "https://j6t2y8j5.rocketcdn.me/wp-content/uploads/2020/06/como-fazer-sushi-em-casa-origem-tipos-desenvolvidos-e-receitas.png"
+    },
+    {
+      "id": 20,
+      "name": "Yakisoba de porco",
+      "description": "Macarrão, porco, cebola, pimentão, acelga e molho teriyaki.",
+      "price": 27.00,
+      "categoria": "yakisoba",
+      "image": "https://j6t2y8j5.rocketcdn.me/wp-content/uploads/2020/06/como-fazer-sushi-em-casa-origem-tipos-desenvolvidos-e-receitas.png"
+    },
+    {
+      "id": 21,
+      "name": "Temaki de salmão",
+      "description": "Salmão, arroz, nori e cream cheese.",
+      "price": 15.50,
+      "categoria": "temaki",
+      "image": "https://j6t2y8j5.rocketcdn.me/wp-content/uploads/2020/06/como-fazer-sushi-em-casa-origem-tipos-desenvolvidos-e-receitas.png"
+    },
+    {
+      "id": 22,
+      "name": "Temaki de atum",
+      "description": "Atum, arroz, nori, cebolinha e gergelim.",
+      "price": 16.00,
+      "categoria": "temaki",
+      "image": "https://j6t2y8j5.rocketcdn.me/wp-content/uploads/2020/06/como-fazer-sushi-em-casa-origem-tipos-desenvolvidos-e-receitas.png"
+    },
+    {
+      "id": 23,
+      "name": "Temaki de camarão",
+      "description": "Camarão, arroz, nori, cream cheese e cebolinha.",
+      "price": 17.00,
+      "categoria": "temaki",
+      "image": "https://j6t2y8j5.rocketcdn.me/wp-content/uploads/2020/06/como-fazer-sushi-em-casa-origem-tipos-desenvolvidos-e-receitas.png"
+    },
+    {
+      "id": 24,
+      "name": "Temaki de kani",
+      "description": "Kani, arroz, nori, pepino e gergelim.",
+      "price": 12.50,
+      "categoria": "temaki",
+      "image": "https://j6t2y8j5.rocketcdn.me/wp-content/uploads/2020/06/como-fazer-sushi-em-casa-origem-tipos-desenvolvidos-e-receitas.png"
+    },
+    {
+      "id": 25,
+      "name": "Temaki de skin",
+      "description": "Peixe skin, arroz, nori, cream cheese e cebolinha.",
+      "price": 13.00,
+      "categoria": "temaki",
+      "image": "https://j6t2y8j5.rocketcdn.me/wp-content/uploads/2020/06/como-fazer-sushi-em-casa-origem-tipos-desenvolvidos-e-receitas.png"
+    },
+    {
+      "id": 26,
+      "name": "Temaki de salmão com cream cheese",
+      "description": "Salmão, arroz, nori e cream cheese.",
+      "price": 15.50,
+      "categoria": "temaki",
+      "image": "https://j6t2y8j5.rocketcdn.me/wp-content/uploads/2020/06/como-fazer-sushi-em-casa-origem-tipos-desenvolvidos-e-receitas.png"
+    },
+    {
+      "id": 27,
+      "name": "Temaki de salmão com cebolinha",
+      "description": "Salmão, arroz, nori e cebolinha.",
+      "price": 14.00,
+      "categoria": "temaki",
+      "image": "https://j6t2y8j5.rocketcdn.me/wp-content/uploads/2020/06/como-fazer-sushi-em-casa-origem-tipos-desenvolvidos-e-receitas.png"
+    },
+    {
+      "id": 28,
+      "name": "Temaki de atum com cream cheese",
+      "description": "Atum, arroz, nori e cream cheese.",
+      "price": 16.00,
+      "categoria": "temaki",
+      "image": "https://j6t2y8j5.rocketcdn.me/wp-content/uploads/2020/06/como-fazer-sushi-em-casa-origem-tipos-desenvolvidos-e-receitas.png"
+    },
+    {
+      "id": 29,
+      "name": "Temaki de camarão com cream cheese",
+      "description": "Camarão, arroz, nori e cream cheese.",
+      "price": 17.00,
+      "categoria": "temaki",
+      "image": "https://j6t2y8j5.rocketcdn.me/wp-content/uploads/2020/06/como-fazer-sushi-em-casa-origem-tipos-desenvolvidos-e-receitas.png"
+    },
+    {
+      "id": 30,
+      "name": "Temaki de polvo",
+      "description": "Polvo, arroz, nori, cebolinha e gergelim.",
+      "price": 18.00,
+      "categoria": "temaki",
+      "image": "https://j6t2y8j5.rocketcdn.me/wp-content/uploads/2020/06/como-fazer-sushi-em-casa-origem-tipos-desenvolvidos-e-receitas.png"
+    }
+  ]
+}

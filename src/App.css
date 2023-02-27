@@ -1,0 +1,158 @@
+.main-container {
+  width: 70%;
+  margin: 0 auto;
+}
+
+/* menu styles */
+.menu {
+  background-color: #211C1E;
+  height: 60px;
+  padding: 10px 0;
+}
+
+.menu-content {
+  width: 70%;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu h1 {
+  font-size: 34px;
+  color: #BF0404;
+  flex-basis: 20%;
+  font-weight: bold;
+}
+
+.menu input {
+  flex-basis: 50%;
+  height: 34px;
+  width: 100%;
+}
+
+.menu ul {
+  display: flex;
+  list-style: none;
+  gap: 5px;
+}
+
+.menu ul li {
+  font-size: 18px;
+  color: #FFF;
+}
+
+/* home styles */
+
+.products-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  padding: 10px;
+  border-radius: 6px 6px 0 0;
+  background-color: #211C1E;
+
+  margin: 5px;
+  min-height: 200px;
+
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 45%;
+
+  cursor: pointer;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: #FFF;
+}
+
+.card img {
+  width: 200px;
+  object-fit: contain;
+}
+
+/*  Details styles */
+
+.details-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.details-product {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  margin: 50px 0;
+}
+
+.photo-content img {
+  width: 250px;
+  object-fit: contain;
+}
+
+.details-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.observation-section {
+  width: 100%;
+  background-color: #211C1E;
+  height: 30px;
+  padding: 5px;
+  color: #FFF;
+  margin: 20px 0;
+}
+
+.observation-section textarea {
+  width: 100%;
+}
+
+.controls {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+
+/* cart styles */
+
+.table-cart {
+  width: 100%;
+  background: #FFF;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.table-cart thead, th {
+  color: #999;
+  text-align: left;
+  padding: 12px;
+}
+
+.table-cart tbody, th {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.table-image {
+  height: 100px;
+}
+
+.margin-button {
+  margin: 0px 5px;
+}
+
+.footer-cart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
