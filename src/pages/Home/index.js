@@ -1,19 +1,27 @@
-import React, {useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import api from '../../services/api'
 
 import Menu from "../../components/Menu";
+import { priceFormat } from "../../utils/priceFormat";
 
 const Home = () => {
-  const [products, setProducts] = useState([{
-    "id": 1,
-    "name": "Sushi de salmão",
-    "description": "Salmão fresco, arroz temperado, nori e molho shoyu.",
-    "price": 12.50,
-    "category": "sushi",
-    "image": "https://j6t2y8j5.rocketcdn.me/wp-content/uploads/2020/06/como-fazer-sushi-em-casa-origem-tipos-desenvolvidos-e-receitas.png"
-  }]);
+  const [products, setProducts] = useState([]);
+  
   const navigate = useNavigate()
 
+  useEffect(() => {
+    api.get('/products')
+      .then((response) => {
+        setProducts(response.data.map((item) => {
+          return {
+            ...item,
+            priceFormatted: priceFormat(item.price)
+          }
+        }))
+      })
+      .catch(() => { })
+  }, [])
 
   return (
     <div>
@@ -25,7 +33,7 @@ const Home = () => {
               <div className="card-content" datatest-id="card-product">
                 <h1>{product.name}</h1>
                 <p>{product.description}</p>
-                <span>{product.priceFormatted}</span>
+                <span>{(product.priceFormatted)}</span>
               </div>
               <img
                 alt={product.name}

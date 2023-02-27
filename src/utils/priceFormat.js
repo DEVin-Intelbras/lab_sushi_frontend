@@ -4,5 +4,4 @@ export const priceFormat = (value) => {
     { style: 'currency', currency: 'BRL' }
   )
     .format(value)
-
 }
