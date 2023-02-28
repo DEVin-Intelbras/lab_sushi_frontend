@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import api from '../../services/api'
 
@@ -7,7 +7,7 @@ import { priceFormat } from "../../utils/priceFormat";
 
 const Home = () => {
   const [products, setProducts] = useState([]);
-  
+
   const navigate = useNavigate()
 
   useEffect(() => {
@@ -20,12 +20,13 @@ const Home = () => {
           }
         }))
       })
-      .catch(() => { })
+      .catch(() => alert('Houve um erro ao buscar os produtos :('))
   }, [])
 
   return (
     <div>
       <Menu />
+
       <div className="main-container">
         <div className="products-list">
           {products.map((product) => (

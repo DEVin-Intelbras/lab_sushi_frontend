@@ -1,13 +1,18 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { FaMinus, FaPlus } from "react-icons/fa";
 import { useLocation } from "react-router-dom";
 
 
 import Menu from "../../components/Menu";
+import { CartContext } from "../../contexts/CartContext";
 
 const Details = () => {
   const location = useLocation();
 
+  const {cart, addProduct} = useContext(CartContext)
+
   const [observation, setObservation] = useState('');
+
   const [quantity, setQuantity] = useState(1);
 
   const handleIncrementQuantity = () => setQuantity(quantity + 1)
@@ -15,7 +20,15 @@ const Details = () => {
   const handleIDecrementQuantity = () => setQuantity(quantity - 1)
 
   const handleAddProductInCart = () => {
+    addProduct({
+      product: location.state,
+      quantity: quantity,
+      observation: observation
+    })
+  }
 
+  const handleChangeTextarea = (event) => {
+    setObservation(event.target.value)
   }
 
   return (
@@ -39,9 +52,13 @@ const Details = () => {
           <div className="observation-section">
             Observações
           </div>
+
           <textarea
             placeholder="Digite uma observação"
-            rows={5}>
+            rows={5}
+            value={observation}
+            onChange={handleChangeTextarea}
+            >
           </textarea>
 
           <div className="controls">
@@ -49,13 +66,13 @@ const Details = () => {
               onClick={handleIDecrementQuantity}
               disabled={quantity === 1}
             >
-              -
+              <FaMinus />
             </button>
             {quantity}
 
             <button
               onClick={handleIncrementQuantity}>
-              +
+              <FaPlus />
             </button>
 
             <button onClick={handleAddProductInCart}>Adicionar</button>
