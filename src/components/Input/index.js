@@ -1,18 +1,26 @@
 import React from 'react';
 
-// import { Container } from './styles';
-
-function Input({ label, value, placeholder, onChange, name, onBlur }) {
+function Input({
+  label,
+  value,
+  placeholder = '',
+  onChange,
+  name,
+  onBlur,
+  type = 'text'
+}) {
   return (
     <div>
-      <label> {label} </label>
+      <label htmlFor={name}> {label} </label>
       <input
         className="input"
         value={value}
+        type={type}
         onChange={onChange}
         placeholder={placeholder}
         name={name}
         onBlur={onBlur}
+        id={name}
       />
     </div>
   )

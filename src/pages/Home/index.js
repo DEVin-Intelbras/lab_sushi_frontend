@@ -1,8 +1,10 @@
 import React, {useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import api from '../../services/api'
+import { toast } from "react-toastify";
+import { productsActions } from '../../actions/products.action'
 
-import Menu from "../../components/Menu";
+import ProductCard from "../../components/ProductCard";
+
 import { priceFormat } from "../../utils/priceFormat";
 
 const Home = () => {
@@ -11,7 +13,7 @@ const Home = () => {
   const navigate = useNavigate()
 
   useEffect(() => {
-    api.get('/products')
+    productsActions.getProductsAction()
       .then((response) => {
         setProducts(response.data.map((item) => {
           return {
@@ -20,27 +22,15 @@ const Home = () => {
           }
         }))
       })
-      .catch(() => alert('Houve um erro ao buscar os produtos :('))
+      .catch(() => toast.error('Houve um erro ao buscar os produtos :('))
   }, [])
 
   return (
     <div>
-      <Menu />
-
       <div className="main-container">
-        <div className="products-list">
+        <div className="products-list" data-testid="products-list">
           {products.map((product) => (
-            <div data-testid="product-card" className="card" onClick={() => navigate('/details', { state: product })} key={product.id}  >
-              <div className="card-content" datatest-id="card-product">
-                <h1>{product.name}</h1>
-                <p>{product.description}</p>
-                <span>{(product.priceFormatted)}</span>
-              </div>
-              <img
-                alt={product.name}
-                src={product.image}
-              />
-            </div>
+            <ProductCard key={product.id} product={product} onClick={() => navigate('/details', { state: { ...product } })} />
           ))}
         </div>
       </div>

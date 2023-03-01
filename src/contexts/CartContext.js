@@ -6,33 +6,10 @@ import { priceFormat } from "../utils/priceFormat";
 export const CartContext = createContext({})
 
 export const CartProvider = ({ children }) => {
-
-  /*
-    [
-
-      {
-      itemId: "234dd-12234-43434-3232",
-      subTotal: 15,
-      subTotalFormatted: "R$ 15,00"
-
-      quantity: 3,
-      observation: "retirar a cebola",
-      product: {
-        id: 1,
-        name: "sushi",
-        price: 12.5,
-        description: "....",
-        image: "minhaimagem.png",
-        category: "",
-        priceFormatted: "R$ 12,50"
-      }
-    },
-    ]
-
-  */
-
   const navigate = useNavigate()
+
   const [cart, setCart] = useState([])
+
   const [total, setTotal] = useState({
     total: 0,
     totalFormatted: "R$ 0,00"
@@ -57,8 +34,6 @@ export const CartProvider = ({ children }) => {
   }
 
   const changeProductInCart = (itemId, quantity) => {
-    console.log(itemId)
-    console.log(quantity)
     setCart(cart.map(item => {
       if (item.itemId === itemId) {
         item.quantity = quantity
@@ -68,8 +43,6 @@ export const CartProvider = ({ children }) => {
       return item
     }))
   }
-  console.log(cart)
-
 
   useEffect(() => {
     const calc = cart.reduce(
