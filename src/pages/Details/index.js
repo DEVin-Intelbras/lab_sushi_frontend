@@ -19,6 +19,7 @@ const Details = () => {
 
   const handleIDecrementQuantity = () => setQuantity(quantity - 1)
 
+
   const handleAddProductInCart = () => {
     addProduct({
       product: location.state,

@@ -1,24 +1,16 @@
 
+import { useContext } from 'react';
 import { FaMinusCircle, FaPlusCircle, FaTrashAlt } from 'react-icons/fa'
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import Input from '../../components/Input';
 import Menu from '../../components/Menu';
+import { CartContext } from '../../contexts/CartContext';
 
 const Cart = () => {
 
-  const cart = [{
-    itemId: 10,
-    quantity: 1,
-    product: {
-      "id": 1,
-      "name": "Sushi de salmão",
-      "description": "Salmão fresco, arroz temperado, nori e molho shoyu.",
-      "price": 12.50,
-      "category": "sushi",
-      "image": "https://j6t2y8j5.rocketcdn.me/wp-content/uploads/2020/06/como-fazer-sushi-em-casa-origem-tipos-desenvolvidos-e-receitas.png"
-    },
-    "subTotalFormatted": "12,00",
-  }]
+  const { cart, removeItem, changeItem, totalCart } = useContext(CartContext)
+
 
   const navigate = useNavigate();
 
@@ -49,7 +41,7 @@ const Cart = () => {
                     size={18}
                     color="#9721BD"
                     className='margin-button'
-                  // onClick={() => handleChangeQuantity( item.quantity - 1, item.itemId)}
+                    onClick={() => changeItem(item.itemId, Number(item.quantity) - 1)}
                   />
 
                   {item.quantity}
@@ -57,7 +49,7 @@ const Cart = () => {
                     size={18}
                     color="#9721BD"
                     className='margin-button'
-                  // onClick={() => handleChangeQuantity(item.quantity + 1, item.itemId)}
+                    onClick={() => changeItem(item.itemId, Number(item.quantity) + 1)}
                   />
                 </td>
 
@@ -71,7 +63,7 @@ const Cart = () => {
                       cancelButtonText: `Cancelar`,
                     }).then((result) => {
                       if (result.isConfirmed) {
-                        // removeItem(item.id)
+                        removeItem(item.itemId)
                       }
                     })
                   }} />
@@ -81,10 +73,15 @@ const Cart = () => {
           </tbody>
         </table>
         <div className='footer-cart'>
-          <h1>Total: {1000}</h1>
-          <button className='book-button' onClick={() => navigate('/checkout')}>Finalizar compra</button>
+                  
+
+          <h1>Total: {totalCart.totalFormatted}</h1>
+
+          <button onClick={() => navigate('/order')}>Continuar compra</button>
         </div>
       </div>
+
+
     </>
   )
 }

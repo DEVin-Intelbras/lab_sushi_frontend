@@ -5,6 +5,7 @@ import Cart from '../pages/Cart';
 import Details from '../pages/Details';
 
 import Home from '../pages/Home';
+import Order from '../pages/Order';
 
 const AppRoutes = () => {
   return (
@@ -12,6 +13,7 @@ const AppRoutes = () => {
       <Route path="/" element={<Home />} />
       <Route path="details" element={<Details />} />
       <Route path="cart" element={<Cart />} />
+      <Route path="order" element={<Order />} />
     </Routes>
   );
 }
