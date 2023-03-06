@@ -3,5 +3,5 @@ export const priceFormat = (value) => {
     'pt-BR',
     { style: 'currency', currency: 'BRL' }
   )
-    .format(value)
+    .format(value).replace(/\s+/g, "");
 }

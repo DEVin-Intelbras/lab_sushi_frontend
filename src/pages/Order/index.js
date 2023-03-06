@@ -1,9 +1,14 @@
 import axios from 'axios';
 import React, { useState } from 'react';
+
 import Input from '../../components/Input';
-import Menu from '../../components/Menu';
 import RadioInput from '../../components/Radio';
 import Select from '../../components/Select';
+
+import { OPTIONS_PAYMENT } from '../../constants'
+
+import { orderActions } from '../../actions/order.action'
+import { toast } from 'react-toastify';
 
 function Order() {
 
@@ -13,7 +18,6 @@ function Order() {
     phone: '',
     cep: '',
     address: '',
-    number: '',
     state: '',
     neighborhood: '',
     city: '',
@@ -23,8 +27,6 @@ function Order() {
   })
 
   const handleChange = (e) => {
-
-
     setOrder({ ...order, [e.target.name]: e.target.value })
   }
 
@@ -44,12 +46,45 @@ function Order() {
       .catch(() => alert('Cep nao encontrado'))
   }
 
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+
+    const body = {
+      clientName: order.name,
+      clientContact: order.phone,
+      clientAddress: {
+        cep: order.cep,
+        address: order.address,
+        state: order.state,
+        neighborhood: order.neighborhood,
+        city: order.city,
+      },
+      paymentType: order.paymentType,
+      haveHashi: order.haveHashi
+    }
+
+    const message = `%0D%0A *olá* ${order.name}`
+
+    orderActions.addOrderAction(body)
+      .then(() => {
+        window.location.replace(`https://api.whatsapp.com/send?text=${message}`);
+
+
+        toast.success('cadastrado com sucesso')
+      })
+      .catch(() => {
+        toast.error('houve um erro')
+      })
+  }
+
+
   return (
     <div>
-      <Menu />
+
       <div className='main-container'>
 
-        <div className='form-container'>
+        <form className='form-container' onSubmit={handleSubmit}>
 
 
           <Input
@@ -118,38 +153,24 @@ function Order() {
             label="Selecione uma forma de pagamento"
             value={order.paymentType}
             onChange={handleChange}
-            options={[
-              { value: 'PIX', label: 'PIX' },
-              { value: 'CRED', label: 'Cartão de Crédito' },
-              { value: 'DEB', label: 'Cartão de débito' }
-            ]}
+            options={OPTIONS_PAYMENT}
+            testId="payment-type-select"
           />
 
-          <Select
-            name="haveStraw"
-            label="Deseja canudo ?"
-            value={order.haveStraw}
-            onChange={handleChange}
-            options={[
-              { value: 'SIM', label: 'SIM' },
-              { value: 'NAO', label: 'NAO' },
-            ]}
-          />
-
-            {order.haveHashi}
-
+          <p>Quantos hashi ?</p>
           <RadioInput
             options={[
-              { value: "option1", label: "Opção 1" },
-              { value: "option2", label: "Opção 2" },
-              { value: "option3", label: "Opção 3" },
+              { value: "1", label: "Quero 1" },
+              { value: "2", label: "Quero 2" },
+              { value: "3", label: "Quero 3" },
             ]}
             name="haveHashi"
             onChange={handleChange}
             value={order.haveHashi}
           />
 
-        </div>
+          <button type='submit' data-testid="submit-button-form">Fazer pedido</button>
+        </form>
 
       </div>
     </div>

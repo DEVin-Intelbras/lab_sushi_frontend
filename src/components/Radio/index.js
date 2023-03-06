@@ -1,6 +1,8 @@
 import React from "react";
 
 function RadioInput({ options, onChange, name, value }) {
+
+
   return (
     <div>
       {options.map((option) => (

@@ -1,15 +1,16 @@
 import React, { useContext, useState } from "react";
 import { FaMinus, FaPlus } from "react-icons/fa";
-import { useLocation } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 
-
-import Menu from "../../components/Menu";
 import { CartContext } from "../../contexts/CartContext";
 
 const Details = () => {
   const location = useLocation();
+  const params = useParams()
 
-  const {cart, addProduct} = useContext(CartContext)
+  console.log("ID do produto enviado via URL", params?.id)
+
+  const { addProduct} = useContext(CartContext)
 
   const [observation, setObservation] = useState('');
 
@@ -34,18 +35,17 @@ const Details = () => {
 
   return (
     <div>
-      <Menu />
       <div className="main-container">
         <div className="details-container">
           <div className="details-product">
             <div className="photo-content">
-              <img src={location.state.image} alt="logo" />
+              <img src={location.state.image} alt={location.state.name} />
             </div>
             <div className="details-content">
               <h1>
                 {location.state.name}
               </h1>
-              <span> {location.state.price}</span>
+              <span> {location.state.priceFormatted}</span>
               <p> {location.state.description}</p>
             </div>
           </div>
@@ -66,13 +66,17 @@ const Details = () => {
             <button
               onClick={handleIDecrementQuantity}
               disabled={quantity === 1}
+              data-testid="minus-button"
             >
               <FaMinus />
             </button>
-            {quantity}
+
+            <span data-testid="quantity-cart">{quantity}</span>
 
             <button
-              onClick={handleIncrementQuantity}>
+              onClick={handleIncrementQuantity}
+              data-testid="plus-button"
+              >
               <FaPlus />
             </button>
 

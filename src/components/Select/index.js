@@ -1,11 +1,16 @@
 import React from 'react';
 
-function Select({ label, name, options, value, onChange }) {
+function Select({ label, name, options, value, onChange, testId }) {
   return (
     <div>
       <label> {label} </label>
-      <select name={name} value={value} onChange={onChange}>
-        {options.map(item => <option key={item.value} value={item.value}>{item.label}</option>)}
+      <select name={name} value={value} onChange={onChange} data-testid={testId} >
+        {options.map(item => <option
+          data-testid={`option-${testId}`}
+          key={item.value}
+          value={item.value}>
+          {item.label}
+        </option>)}
       </select>
     </div>
   );
